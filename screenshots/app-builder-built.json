@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "All Is Number",
+      "hasCanvas": false,
+      "bodyTextLen": 630,
+      "bodyTextHash": "9a8dc38f545b458d27c1852c39591e09e6668c0a6877c21da62fcd7f3503e87c",
+      "bodyTextPrefix": "A SERIES All Is Number Nine short films. A new voice each time. ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "All Is Number",
+      "hasCanvas": false,
+      "bodyTextLen": 630,
+      "bodyTextHash": "9a8dc38f545b458d27c1852c39591e09e6668c0a6877c21da62fcd7f3503e87c",
+      "bodyTextPrefix": "A SERIES All Is Number Nine short films. A new voice each time. ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

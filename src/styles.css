@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #12161c;
+  --color-ink-2: #1c2430;
+  --color-parchment: #f3ead7;
+  --color-parchment-dim: #cbbfa6;
+  --color-aegean: #1f6f8b;
+  --color-aegean-deep: #143e52;
+  --color-terra: #c46a3a;
+  --color-gold: #e2c07a;
+  --color-gold-deep: #8c6230;
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --radius: 0.8rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--color-ink);
+    color: var(--color-parchment);
+    font-family: var(--font-sans);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+}
+
+.stage-slot {
+  container-type: size;
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+  min-width: 0;
+}
+
+.fit-16x9 {
+  width: min(100cqw, calc(100cqh * 16 / 9));
+  aspect-ratio: 16 / 9;
+}
+
+.film-frame {
+  overflow: hidden;
+  border-radius: 0.7rem;
+  box-shadow: 0 24px 70px rgb(0 0 0 / 0.45);
+}
+
+.theater[data-record="true"] .film-frame {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@keyframes scene-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.scene-in {
+  animation: scene-in 320ms ease;
+}
+
+.theater[data-record="true"] .lesson-stage {
+  padding-bottom: 4.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene-in {
+    animation: none;
+  }
+}
+
+.scrub {
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.scrub::-webkit-slider-runnable-track {
+  height: 100%;
+  background: transparent;
+}
+
+.scrub::-webkit-slider-thumb {
+  appearance: none;
+  width: 0;
+  height: 0;
+}
+
+.scrub::-moz-range-thumb {
+  width: 0;
+  height: 0;
+  border: 0;
+  background: transparent;
+}
